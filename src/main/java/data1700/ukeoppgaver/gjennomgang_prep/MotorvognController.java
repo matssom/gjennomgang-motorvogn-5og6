@@ -15,13 +15,23 @@ public class MotorvognController {
     MotorvognRepository rep;
 
     @PostMapping("/lagre")
-    public void lagreKunde(Motorvogn motorvogn){
-        rep.lagreKunde(motorvogn);
+    public void lagreMotorvogn(Motorvogn motorvogn){
+        rep.lagreMotorvogn(motorvogn);
+    }
+
+    @PostMapping("/endre")
+    public void endreMotorvogn(Motorvogn motorvogn){
+        rep.endreMotorvogn(motorvogn);
     }
 
     @GetMapping("/hentAlle")
     public List<Motorvogn> hentAlle(){
         return rep.hentAlle();
+    }
+
+    @GetMapping("/hentEnMotorvogn")
+    public Motorvogn hentAlle(int id){
+        return rep.hentEnMotorvogn(id);
     }
 
     @GetMapping("/hentBiler")

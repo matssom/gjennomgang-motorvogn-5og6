@@ -11,6 +11,6 @@ CREATE TABLE Motorvogn (
     adresse VARCHAR(50) NOT NULL,
     kjennetegn VARCHAR(10) NOT NULL,
     type VARCHAR(10) NOT NULL,
-    PRIMARY KEY (personnr),
+    PRIMARY KEY (id),
     FOREIGN KEY (type) references Biler(type)
 );
